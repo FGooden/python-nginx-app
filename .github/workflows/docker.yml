@@ -24,7 +24,13 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-
+      - name: docker login
+        env: 
+          DOCKER_USER: ${{ secrets.DOCKER_USER }}
+          DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
+        run: | 
+          docker login -u $DOCKER_USER -t $DOCKER_TOKEN
+      
       # Runs a single command using the runners shell
       - name: Docker build app1
         run: |
