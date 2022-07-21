@@ -34,21 +34,17 @@ jobs:
       # Runs a single command using the runners shell
       - name: Docker build app1
         run: |
-          docker build ./app-1
+          docker build ./app-1 tag ridavera/github-repo:2.0
           
       - name: Docker build app2
         run: |
-          docker build ./app-2 
+          docker build ./app-2 tag ridavera/github-repo:2.0
           
       - name: Docker build nginx
         run: |
-          docker build ./nginx
+          docker build ./nginx tag ridavera/github-repo:2.0
           
-      - name: Docker tag
-        run: |
-          docker tag github-repo ridavera/app-1:2.0
-          docker tag github-repo ridavera/app-2:2.1
-          docker tag github-repo ridavera/nginx:2.2
+      
           
       #- name: Dockerhub push 
         #run: |
