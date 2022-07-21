@@ -45,6 +45,9 @@ jobs:
           docker build ./nginx
           
       - name: Dockerhub push 
-        run: docker push ridavera/github-repo:app-1, ridavera/github-repo:app-2, ridavera/github-repo:nginx
+        run: |
+          docker push ridavera/github-repo:app-1 
+          docker push ridavera/github-repo:app-2 
+          docker push ridavera/github-repo:nginx
         
           
