@@ -44,10 +44,16 @@ jobs:
         run: |
           docker build ./nginx
           
-      - name: Dockerhub push 
+      - name: Docker tag
         run: |
-          docker push ridavera/app-1 
-          docker push ridavera/app-2 
-          docker push ridavera/nginx
+          docker tag app-1 ridavera/github-repo:2.0
+          docker tag app-2 ridavera/github-repo:2.1
+          docker tag nginx ridavera/github-repo:2.2
+          
+      #- name: Dockerhub push 
+        #run: |
+         # docker push ridavera/app-1 
+          #docker push ridavera/app-2 
+         # docker push ridavera/nginx
         
           
