@@ -46,8 +46,8 @@ jobs:
           
       - name: Dockerhub push 
         run: |
-          docker push ridavera/github-repo/app-1 
-          docker push ridavera/github-repo/app-2 
-          docker push ridavera/github-repo/nginx
+          docker push ridavera/app-1 
+          docker push ridavera/app-2 
+          docker push ridavera/nginx
         
           
