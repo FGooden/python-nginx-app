@@ -38,11 +38,11 @@ jobs:
           
       - name: Docker build app2
         run: |
-          docker build ./app-2 -t ridavera/github-repo:2.0
+          docker build ./app-2 -t ridavera/github-repo:2.1
           
       - name: Docker build nginx
         run: |
-          docker build ./nginx -t ridavera/github-repo:2.0
+          docker build ./nginx -t ridavera/github-repo:2.2
           
       
           
