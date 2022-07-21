@@ -46,9 +46,9 @@ jobs:
           
       - name: Docker tag
         run: |
-          docker tag app-1 ridavera/github-repo:2.0
-          docker tag app-2 ridavera/github-repo:2.1
-          docker tag nginx ridavera/github-repo:2.2
+          docker tag ./app-1 ridavera/github-repo:2.0
+          docker tag ./app-2 ridavera/github-repo:2.1
+          docker tag ./nginx ridavera/github-repo:2.2
           
       #- name: Dockerhub push 
         #run: |
